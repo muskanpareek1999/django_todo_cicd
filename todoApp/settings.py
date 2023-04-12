@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'todoApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'testdb',
+        'USER': 'root',
+        'PASSWORD': 'test@123',
+        'HOST': '3.110.220.98',
+        'PORT': '3306',
+        'OPTIONS': {'auth_plugin': 'mysql_native_password'},
     }
 }
 
